@@ -1,30 +1,29 @@
 #include <iostream>
 
-int add (int *x, int y) {
-    int add = 0;
-    for (int i = 0; i < add; i++) {
-        add += *x + i;
-}
-    return add;
+int add(int *x, int y) {
+    int suma = 0;
+    for (int i = 0; i < y; i++) {
+        suma += *(x + i);
+    }
+    return suma;
 }
 
 int main () {
-    int a;
+    int n;
 
-    std::cout<<"ingrese el tamaño: \n";
-    std::cin>>a;
+    std::cout << "Ingrese el tamaño:\n";
+    std::cin >> n;
 
-    int *arre = new int [n];
+    int *arre = new int[n];
 
     for (int i = 0; i < n; i++) {
-        cin>>*arre + i;
+        std::cin >> *(arre + i);
     }
 
     int resultado = add(arre, n);
     
-    std::cout<<"la suma es: "<<resultado<<std::endl;
+    std::cout << "La suma es: " << resultado << std::endl;
 
-    delete[n] arre;
+    delete[] arre;
     return 0;
-
 }
